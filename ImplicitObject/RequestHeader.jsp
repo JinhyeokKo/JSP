@@ -10,10 +10,10 @@
 <body>
 	<h2>3. 요청 헤더 정보 출력하기</h2>
 	<%
-	Enumeration headers = request.getHeaderNames();
-	while (headers.hasMoreElements()) {
-		String headerName = (String)headers.nextElement();
-		String headerValue = request.getHeader(headerName);
+	Enumeration headers = request.getHeaderNames(); // 모든 요청 헤더의 이름을 반환
+	while (headers.hasMoreElements()) { // 출력할 요청 헤더명이 더 있는지 확인
+		String headerName = (String)headers.nextElement(); // 요청헤더 이름 확보
+		String headerValue = request.getHeader(headerName); // 헤더명을 건네 헤더값 확보
 		out.print("헤더명: " + headerName + ", 헤더값: " + headerValue + "<br />");
 	}
 	%>

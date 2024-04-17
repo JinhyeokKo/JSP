@@ -8,6 +8,7 @@
 </head>
 <body>
 	<h2>1. 클라이언트와 서버의 환경정보 읽기</h2>
+	<%-- 2개의 query string으로 전달 ?eng=Hello&han=안녕 --%>
 	<a href="./RequestWebInfo.jsp?eng=Hello&han=안녕">
 	Get 방식 전송</a>
 	<br />
