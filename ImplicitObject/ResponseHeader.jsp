@@ -29,7 +29,7 @@ response.setHeader("myName", "안중근");
 	for (String hName : headerNames) {
 		String hValue = response.getHeader(hName);
 	%>
-		<li><%= hName %> : <%= hValue %> </li>
+		<li> <%= hName %> : <%= hValue %> </li>
 	<%
 	}
 	%>
@@ -38,7 +38,7 @@ response.setHeader("myName", "안중근");
 	Collection<String> myNumber = response.getHeaders("myNumber");
 	for (String myNum : myNumber) {
 	%>
-		<li>myNumber : <%= myNum %></li>
+		<li> myNumber : <%= myNum %></li>
 	<%
 	}
 	%>

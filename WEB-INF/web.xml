@@ -14,4 +14,34 @@
   	<param-name>INIT_PARAM</param-name>
   	<param-value>web.xml에 저장한 초기화 매개변수</param-value>
   </context-param>
+  
+  <context-param>
+  	<param-name>MySQLDriver</param-name>
+  	<param-value>com.mysql.cj.jdbc.Driver</param-value>
+  </context-param>
+  <context-param>
+  	<param-name>MySQLURL</param-name>
+  	<param-value>jdbc:mysql://localhost:3306/jsp</param-value>
+  </context-param>
+  <context-param>
+  	<param-name>MySQLId</param-name>
+  	<param-value>user</param-value>
+  </context-param>
+  <context-param>
+  	<param-name>MySQLPwd</param-name>
+  	<param-value>1234</param-value>
+  </context-param>
+  
+  <session-config>
+  	<session-timeout>20</session-timeout>
+  </session-config>
+  
+  <context-param>
+  	<param-name>POSTS_PER_PAGE</param-name>
+  	<param-value>10</param-value>
+  </context-param>
+  <context-param>
+  	<param-name>PAGES_PER_BLOCK</param-name>
+  	<param-value>5</param-value>
+  </context-param>
 </web-app>

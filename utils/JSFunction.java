@@ -25,7 +25,7 @@ public class JSFunction {
 			String script = ""
 					+ "<script>"
 					+ "    alert('" + msg + "');"
-					+ "    history.back();"
+					+ "    history.back();" // 브라우저가 세션 기록의 바로 뒤 페이지로 이동하도록 지시
 					+ "</script>";
 			out.println(script);
 		} catch(Exception e) {}
