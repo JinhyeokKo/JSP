@@ -10,6 +10,20 @@
     <welcome-file>default.htm</welcome-file>
   </welcome-file-list>
   
+  <!-- 한글 인코딩 -->
+  <filter>
+    <filter-name>SetCharEncoding</filter-name>
+    <filter-class>org.apache.catalina.filters.SetCharacterEncodingFilter</filter-class>
+      <init-param>
+        <param-name>encoding</param-name>
+        <param-value>utf-8</param-value>
+      </init-param>
+  </filter>
+  <filter-mapping>
+    <filter-name>SetCharEncoding</filter-name>
+    <url-pattern>/*</url-pattern>
+  </filter-mapping>
+  
   <context-param>
   	<param-name>INIT_PARAM</param-name>
   	<param-value>web.xml에 저장한 초기화 매개변수</param-value>
@@ -44,4 +58,22 @@
   	<param-name>PAGES_PER_BLOCK</param-name>
   	<param-value>5</param-value>
   </context-param>
+  
+  <servlet> <!-- 서블릿 등록 -->
+  	<servlet-name>HelloServlet</servlet-name> <!-- 서블릿을 매핑하기 위한 서블릿명 -->
+  	<servlet-class>servlet.HelloServlet</servlet-class> <!-- 요청을 처리할 서블릿을 패키지를 포함하여 명시 -->
+  </servlet>
+  <servlet-mapping> <!-- 서블릿과 요청명 매핑 -->
+  	<servlet-name>HelloServlet</servlet-name>
+  	<url-pattern>/Servlet/HelloServlet.do</url-pattern> <!-- 컨텍스트 루트를 제외한 요청명 기입 -->
+  </servlet-mapping>
+  
+    <servlet> <!-- 서블릿 등록 -->
+  	<servlet-name>DirectServletPrint</servlet-name> <!-- 서블릿을 매핑하기 위한 서블릿명 -->
+  	<servlet-class>servlet.DirectServletPrint</servlet-class> <!-- 요청을 처리할 서블릿을 패키지를 포함하여 명시 -->
+  </servlet>
+  <servlet-mapping> <!-- 서블릿과 요청명 매핑 -->
+  	<servlet-name>DirectServletPrint</servlet-name>
+  	<url-pattern>/Servlet/DirectServletPrint.do</url-pattern> <!-- 컨텍스트 루트를 제외한 요청명 기입 -->
+  </servlet-mapping>
 </web-app>
