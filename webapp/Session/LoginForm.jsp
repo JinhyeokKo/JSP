@@ -6,6 +6,7 @@
 	<jsp:include page="../Common/Link.jsp" />
     <h2>로그인 페이지</h2>
     <span style="color: red; font-size: 1.2em;"> 
+    	<!-- request 내장 객체 영역에 LoginErrMsg 속성이 있는지 확인 후 출력 -->
         <%= request.getAttribute("LoginErrMsg") == null ?
                 "" : request.getAttribute("LoginErrMsg") %>
     </span>

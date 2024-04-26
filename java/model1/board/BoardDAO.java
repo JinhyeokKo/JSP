@@ -76,7 +76,7 @@ public class BoardDAO extends JDBConnect {
 	    String query = " SELECT * FROM board ";
 	      
 	    //검색 조건 추가
-	    if (map.get("searchWord") != null) {
+	    if (map.get("searchWord") != null && map.get("searchField") != null) {
 	    	query += " WHERE " + map.get("searchField")
 	               + " LIKE '%" + map.get("searchWord") + "%' ";
 	    }
@@ -173,7 +173,7 @@ public class BoardDAO extends JDBConnect {
 		try {
 			psmt = con.prepareStatement(query);
 			psmt.setString(1, num);
-			psmt.executeQuery();
+			psmt.executeUpdate();
 		} catch (Exception e) {
 			System.out.println("게시물 조회수 증가 중 예외 발생");
 			e.printStackTrace();

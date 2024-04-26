@@ -76,4 +76,17 @@
   	<servlet-name>DirectServletPrint</servlet-name>
   	<url-pattern>/Servlet/DirectServletPrint.do</url-pattern> <!-- 컨텍스트 루트를 제외한 요청명 기입 -->
   </servlet-mapping>
+  
+  <servlet>
+  	<servlet-name>MemberAuth</servlet-name>
+  	<servlet-class>servlet.MemberAuth</servlet-class>
+  	<init-param>
+  		<param-name>admin_id</param-name>
+  		<param-value>nakja</param-value>
+  	</init-param>
+  </servlet>
+  <servlet-mapping>
+  	<servlet-name>MemberAuth</servlet-name>
+  	<url-pattern>/Servlet/MemberAuth.mvc</url-pattern>
+  </servlet-mapping>
 </web-app>
