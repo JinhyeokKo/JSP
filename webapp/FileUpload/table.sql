@@ -1,0 +1,10 @@
+use jsp;
+
+CREATE TABLE myfile (
+    idx INT PRIMARY KEY AUTO_INCREMENT,
+    title VARCHAR(200) NOT NULL,
+    cate VARCHAR(30),
+    ofile VARCHAR(100) NOT NULL,
+    sfile VARCHAR(30) NOT NULL,
+    postdate DATETIME DEFAULT CURRENT_TIMESTAMP NOT NULL
+);
